@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5921f07be5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="add-image">
+        <h1 id="heading">free course</h1>
+        <h3>keep learning - keep growing</h3>
+        <input type="text" size="60" placeholder="  search course">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+        <main>
+            <div>
+                <ul id="list">
+                    <li><a href="#"onclick="changepage(event);" >HOME</a></li>
+                    <li><a href = "#"  onclick="changepage(event);">TECH</a></li>
+                    <li><a href="#"  onclick="changepage(event);">FITNESS</a></li>
+                    <li><a href="#"  onclick="changepage(event);">SPRITIUALITY</a></li>
+                    <li><a href="#"  onclick="changepage(event);">INTELLECTUALITY</a></li>
+    
+                </ul>
+                <div id="link-outline">
+                    <input type="url" id="link" placeholder="paste video url"><button id="btn-embed" onclick="addVideo();"><i class="fa-solid fa-plus"></i></button>
+                </div>  
+               
+            </div>
+            
+            <div id="videos" notnull>
+                <h1 id="paste">No videos there</h1>
+            </div>
+        </main>
+    <script src="../code.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+         
+          
+           background-size: 200px;
+           height: 1660px;
+           overflow: auto;
+
+          
+        
+        }
+        *{
+            text-align: center;
+            
+        }
+        div{
+            margin-top: 20%;
+        }
+        #img{
+            display: none;
+        }
+    </style>
+</head>
+<body id="class">
+   <div>
+    <h1>welcome to hacker website</h1>
+    <h2>do you want to hack your laptop click the below button</h2>
+    <img src="loading.gif" alt="" height="200px" width="200px" id="img"><br>
+    <button id="btn" onclick="showImage();">boom!</button>
+   
+    </div>
+    <div class="videos">
+        <video src="https://youtu.be/Ln24W4bcm3c?si=Sly3x6hBAQ7XWcmj" height="300px" width="300px"></video>
+    </div>
+    <script>
+        function showImage() {
+            const image = document.getElementById('img');
+            // if (image.style.display === 'none') {
+            //     image.style.display = 'block'; // Show the image
+            // } else {
+            //     image.style.display = 'none'; // Hide the image
+            // }
+            image.style.display = "block";
+           image.style.marginLeft = "45%";
+           image.style.marginTop = '0%';
+
+        }
+    </script>
+    
+</body>
+</html>

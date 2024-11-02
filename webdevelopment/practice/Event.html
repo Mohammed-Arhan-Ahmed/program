@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>coursera</h1>
+    <nav>
+        <ul>
+            <li>home</li>
+            <li>my courses</li>
+            <li>pending</li>
+        </ul>
+    </nav>
+</body>
+<script>
+    const ele = document.querySelector('h1');
+    ele.style.color = "white";
+    ele.style.backgroundColor = "black";
+    ele.style.padding = "10px";
+   
+    ele.style.margin = "10px 60px 10px 60px";
+
+    ele.style.textAlign = "center";
+    const liele = document.querySelector("li");
+    document.querySelector('ul').style.display = "inline";
+    document.addEventListener('click', (e) => {
+        console.log("click event called");
+        console.log(e.target);
+    })
+
+
+    // window.addEventListener('load', () =>{
+//     // const btn = document.querySelector('button');
+//     // btn.addEventListener('click', (e) => {
+//     //     console.log(e.target);
+//     // });
+//     console.log("hello");
+// });
+document.addEventListener('DOMContentLoaded', function() {
+   // console.log("hello");
+    const btn = document.querySelector('button');
+     btn.addEventListener('click',remove);
+    });
+    // const element = document.querySelector('.your-class');
+    // if (element) {
+    //     element.classList.add('new-class');
+    // }
+
+
+function remove(event) {
+  var videoElements = document.getElementsByClassName("remove");
+  var removeBtns = document.getElementsByClassName("removebtn");
+  console.log(videoElements);
+
+  // Log the event target and remove buttons collection
+  console.log("Event Target:", event.target);
+  console.log("Remove Buttons:", removeBtns);
+
+  // Find the nearest ancestor button element
+  var button = event.target.closest(".removebtn");
+  var index = Array.prototype.indexOf.call(removeBtns, button);
+  console.log("Index of clicked element:", index);
+  //   //dont check the conditio.
+  if (index !== -1 && videoElements.length > index) {
+    // Remove the video element
+    var toRemove = videoElements[index].parentNode;
+
+    toRemove.innerHTML = ""; // This will remove all child elements within the div with class "videos"
+
+    // Remove the corresponding item from local storage
+    localStorage.removeItem(index);
+    //adding class hide to div remove
+    var divtag = videoElements.parentNode;
+    console.log(divtag);
+  }
+}
+
+</script>
+</html>

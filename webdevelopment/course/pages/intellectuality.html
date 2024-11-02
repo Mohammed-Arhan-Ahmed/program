@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTELLECTUAL</title>
+</head>
+<body>
+    <div id="content"></div>
+    <button >get content</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click',loadcontent);
+
+   
+        // Function to load content from another page
+        function loadcontent() {
+            var url = "http://127.0.0.1:5500/webdevelopment/course/index.html";
+
+            //var containerId = document.querySelector("#content");
+            fetch(url)
+             .then(response => {
+                    
+            console.log(response);
+        }).then(data =>{
+            console.log(data);
+        })
+            .catch(error => console.error('Error loading page:', error));
+    
+    }
+        // Load page2.html into the content div
+        //loadPage('../folder2/page2.html', 'content');
+    </script>
+
+    
+</body>
+</html>
